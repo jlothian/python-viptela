@@ -489,10 +489,11 @@ class viptelaModule(object):
         except:
             return {}
 
-    def get_device_list(self, type, key_name='host-name', remove_key=True):
+    def get_device_list(self, type=None, key_name='host-name', remove_key=True):
         response = self.request('/dataservice/system/device/{0}'.format(type))
 
-        if response.json:
+        return somevar
+
             return response.json['data']
         else:
             return []
